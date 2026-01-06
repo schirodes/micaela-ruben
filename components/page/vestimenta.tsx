@@ -35,7 +35,7 @@ export default function Vestimenta() {
             </p>
 
             <p>
-              <Link href="Hola" target="_blank">
+              <Link href="https://pin.it/1PhdtDHUm" target="_blank">
                 <Button>Ideas Elegante Sport para ellas</Button>
               </Link>
             </p>
@@ -51,7 +51,7 @@ export default function Vestimenta() {
             </p>
 
             <p>
-              <Link href="Hola" target="_blank">
+              <Link href="https://pin.it/TXlSEctRV" target="_blank">
                 <Button>Ideas Elegante Sport para ellos</Button>
               </Link>
             </p>
