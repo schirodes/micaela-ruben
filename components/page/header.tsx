@@ -85,7 +85,7 @@ export default function Header() {
           </Card>
         </div>
         <Image
-          src={'/header.jpg'}
+          src={'/header.webp'}
           className="w-full h-full object-cover"
           width={1920}
           height={1920}

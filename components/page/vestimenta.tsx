@@ -46,7 +46,7 @@ export default function Vestimenta() {
             <Separator className="block md:hidden" />
           </div>
           <div className="flex flex-col gap-5">
-            <p className="flex flex-row gap-2 items-center font-bold underline text-end justify-end">
+            <p className="flex flex-row gap-2 items-center font-bold underline text-start justify-start md:justify-end">
               <Mars /> Ellos
             </p>
 

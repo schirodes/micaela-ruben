@@ -1,5 +1,6 @@
 import Direcciones from '@/components/page/direcciones';
 import Header from '@/components/page/header';
+import Regalos from '@/components/page/regalos';
 import Vestimenta from '@/components/page/vestimenta';
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Header />
       <Direcciones />
       <Vestimenta />
+      <Regalos />
     </main>
   );
 }

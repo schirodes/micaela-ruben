@@ -127,6 +127,7 @@
     @apply font-extrabold;
     @apply text-3xl;
     @apply text-center;
+    @apply flex flex-row items-center gap-5;
   }
 }
 
