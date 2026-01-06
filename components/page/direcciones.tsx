@@ -18,8 +18,8 @@ export default function Direcciones() {
     >
       <h1>Información y direcciones</h1>
 
-      <div className="flex flex-col md:flex-row gap-10 w-3/4">
-        <Card className="flex w-full flex-col md:w-1/2">
+      <div className="flex flex-col md:flex-row gap-10 w-full items-center justify-center">
+        <Card className="flex card-size flex-col">
           <CardHeader>
             <CardTitle className="flex flex-row items-center gap-5">
               <Church /> <p>La Iglesia</p>
@@ -49,7 +49,7 @@ export default function Direcciones() {
           </CardFooter>
         </Card>
 
-        <Card className="flex w-full flex-col md:w-1/2">
+        <Card className="flex card-size flex-col md:w-1/2">
           <CardHeader>
             <CardTitle className="flex flex-row items-center gap-5">
               <PartyPopper /> <p>¡La Fiesta!</p>

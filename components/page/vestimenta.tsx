@@ -21,7 +21,7 @@ export default function Vestimenta() {
       <p>
         El código de vestimenta es <b>¡Elegante Sport!</b>
       </p>
-      <Card className="w-3/4 md:w-1/2">
+      <Card className="w-11/12 md:w-1/2">
         <CardHeader>
           <CardTitle className="flex flex-row gap-5 items-center">
             <Shirt /> ¿No sabes que ponerte?

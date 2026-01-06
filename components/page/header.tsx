@@ -44,7 +44,7 @@ export default function Header() {
       </div>
 
       <div className="h-full relative">
-        <div className="flex md:hidden w-5/6 absolute top-1/3 justify-self-center">
+        <div className="flex md:hidden card-size absolute top-1/3 justify-self-center">
           <Card className="opacity-85 w-full">
             <CardContent className="text-center flex flex-col gap-5 font-bold text-xs">
               <p className="font-extrabold text-2xl">¡Bienvenidos/as!</p>

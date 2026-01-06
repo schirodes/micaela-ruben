@@ -52,7 +52,7 @@ export default function Regalos() {
       <h1>
         <Gift /> Regalos
       </h1>
-      <p>
+      <p className="px-5">
         Nuestra boda es el comienzo de un gran viaje juntos para toda la vida,
         <br />y el regalo más lindo es que estén con nosotros en este día tan
         especial. <br />
@@ -65,7 +65,7 @@ export default function Regalos() {
         <br />
         Es por eso que los invitamos a ser parte de este gran sueño.
       </p>
-      <Card className="w-3/4 md:w-1/3 text-start">
+      <Card className="card-size text-start">
         <CardHeader>
           <CardTitle className="flex flex-row gap-5 items-center">
             <Gift /> Ideas para regalos
@@ -78,7 +78,7 @@ export default function Regalos() {
           <Table>
             <TableHeader className="bg-gray-500">
               <TableRow>
-                <TableHead className="w-2/3">Idea</TableHead>
+                <TableHead className="w-1/2 md:w-2/3">Idea</TableHead>
                 <TableHead>Monto sugerido</TableHead>
               </TableRow>
             </TableHeader>
