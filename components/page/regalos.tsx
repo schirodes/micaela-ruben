@@ -1,4 +1,6 @@
-import { Gift } from 'lucide-react';
+'use client';
+
+import { Copy, Gift } from 'lucide-react';
 import {
   Card,
   CardContent,
@@ -17,6 +19,8 @@ import {
   TableRow,
 } from '../ui/table';
 import Image from 'next/image';
+import { Button } from '../ui/button';
+import { toast } from 'sonner';
 
 const regalos = [
   { nombre: 'Nuestros primeros ladrillos', precio: 50000 },
@@ -27,6 +31,16 @@ const regalos = [
   { nombre: 'Sillón', precio: 375000 },
   { nombre: 'Techo', precio: 500000 },
 ] as const;
+
+const copiarAlPortapapeles = async (texto: string) => {
+  try {
+    await navigator.clipboard.writeText(texto);
+
+    toast.success('Copiado al portapapeles');
+  } catch {
+    toast.error('Fallo al copiar al portapapeles');
+  }
+};
 
 export default function Regalos() {
   return (
@@ -82,7 +96,17 @@ export default function Regalos() {
         </CardContent>
         <CardFooter className="flex flex-col text-start items-start gap-2">
           <p className="font-semibold underline">Donde enviar el regalo</p>
-          <p>Alias: rubenfanc.icbc</p>
+          <p>
+            Alias: rubenfanc.icbc{' '}
+            <Button
+              onClick={() => copiarAlPortapapeles('rubenfanc.icbc')}
+              variant={'outline'}
+              className="ml-1"
+            >
+              <Copy />
+            </Button>
+          </p>
+          <p>Propietario: Rubén Eduardo Fanchini</p>
         </CardFooter>
       </Card>
 
