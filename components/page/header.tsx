@@ -8,9 +8,9 @@ import { Button } from '../ui/button';
 export default function Header() {
   return (
     <section id="header" className="flex h-[90svh] flex-row w-full">
-      <div className="bg-gray-700 w-full h-full hidden md:flex md:flex-col items-center justify-center text-3xl font-normal text-center">
+      <div className="bg-gray-700 w-full h-full hidden md:flex md:flex-col items-center justify-center text-base 2xl:text-3xl font-normal text-center">
         <div className="p-page flex flex-col gap-5">
-          <p className="font-extrabold text-8xl pb-10">
+          <p className="font-extrabold text-4xl 2xl:text-8xl pb-10">
             ¡Bienvenidos/as!
             <br />
           </p>

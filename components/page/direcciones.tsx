@@ -1,4 +1,13 @@
-import { Church, Clock, MapPin, PartyPopper } from 'lucide-react';
+'use client';
+
+import {
+  AlertCircleIcon,
+  Church,
+  Clock,
+  Copy,
+  MapPin,
+  PartyPopper,
+} from 'lucide-react';
 import {
   Card,
   CardContent,
@@ -9,6 +18,18 @@ import {
 } from '../ui/card';
 import Link from 'next/link';
 import { Button } from '../ui/button';
+import { toast } from 'sonner';
+import { Alert, AlertDescription, AlertTitle } from '../ui/alert';
+
+const copiarAlPortapapeles = async (texto: string) => {
+  try {
+    await navigator.clipboard.writeText(texto);
+
+    toast.success('Copiado al portapapeles');
+  } catch {
+    toast.error('Fallo al copiar al portapapeles');
+  }
+};
 
 export default function Direcciones() {
   return (
@@ -18,7 +39,26 @@ export default function Direcciones() {
     >
       <h1>Información y direcciones</h1>
 
-      <div className="flex flex-col md:flex-row gap-10 w-full items-center justify-center">
+      <div>
+        Nuestra boda será el{' '}
+        <span className="font-bold text-xl">¡Sábado 31 de Enero!</span>
+      </div>
+
+      <div className="text-center mt-2">
+        Por dudas, consultas o inconvenientes, contactarnos a:
+        <br />
+        <div className="flex flex-col md:flex-row gap-3 justify-center items-center mt-2">
+          <span className="font-bold">+54 11 54733110 (Micaela)</span>
+          <Link href={'https://wa.link/ml40oe'} target="_blank">
+            <Button>Abrir en WhatsApp</Button>
+          </Link>
+          <Button onClick={() => copiarAlPortapapeles('+54 11 54733110')}>
+            <Copy /> Copiar número
+          </Button>
+        </div>
+      </div>
+
+      <div className="flex flex-col md:flex-row gap-10 w-full items-center md:items-start justify-center">
         <Card className="flex card-size flex-col">
           <CardHeader>
             <CardTitle className="flex flex-row items-center gap-5">
@@ -35,6 +75,15 @@ export default function Direcciones() {
             <br />
             La ceremonia se celebrará aquí, revisa la dirección fácil y rápido
             cuantas veces necesites. ¡Te esperamos!
+            <Alert className="mt-5" variant="destructive">
+              <AlertCircleIcon />
+              <AlertTitle>Consideración MUY importante</AlertTitle>
+              <AlertDescription>
+                En la iglesia NO podemos tirar arroz ni nada similar a la
+                salida, asi que te pedimos por favor que no lleven nada desde
+                casa ese día
+              </AlertDescription>
+            </Alert>
           </CardContent>
           <CardFooter>
             <Link
